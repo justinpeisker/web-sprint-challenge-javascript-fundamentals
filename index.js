@@ -30,19 +30,22 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
 
 function summation(number) {
 
-const total = [];
+const newArray = [];
 
-    for(let i = 0; i < number.length; i++){
-      total.push(number);
+    for(let i = 0; i <= number; i++){
+      newArray.push(i); 
+
     }
-    return total;
     
+      
+const total = newArray.reduce(function(acc, item){
+  return acc + item;
+}, 0);
 
-    
+return total;
 }
 
- 
-  // console.log('TASK 2', summation(4));
+console.log('TASK 2', summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -75,7 +78,7 @@ const zooAnimals = [
     return displayNames;
   }
 
-console.log(animalNames(zooAnimals));
+// console.log(animalNames(zooAnimals));
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁

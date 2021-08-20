@@ -26,13 +26,27 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+        .map()- .map is an array method that allows you to convert the data of an array without changing the original array.  .map will return a new array and requires a return keyword.  .map would be quite useful if you needed to change certain case values (upper or lower) to the data in an array.
+        
+        .reduce()- .reduce is an array method that will return a single value.  This method is usually used for addition or multiplication, but doesn't have to be.  .reduce will not change the original array.  This method would be useful if you needed the sum of the populations of multiple cities in an array.
+
+        .filter()- .filter is an array method that allows you to filter the data and return the results to a new array.  It is useful if you needed to find cities that had a population greater than or less than a given number.
+
 2. Explain the difference between a callback and a higher order function.
+
+        A higher order function is a function that receives a function (a callback function) as an argument.  A callback function is a function that is used as an argument in a higher order function.   
 
 3. Explain what a closure is.
 
+        A closure happens when a nested function reaches outside of itself and into the outer function to grab data.
+
 4. Describe the four principles of the 'this' keyword.
 
+        The four principles of the 'this' keyword are window binding, implicit binding, explicit binding, and new binding.  Window binding will apply if none of the other binding principles apply.  Window binding means the 'this' keyword is bound to the window or global object.  If you are operating in 'strict mode' it will retrun undefined.  Window binding for the this keyword is bad practice and one of the other three binding principles should be used.  Implicit binding is the most common type of binding.  When a function is invoked, implicit binding says whatever is left of the '.' is what the 'this' keyword is bound to.  Explicit binding occurs when we explicitly indicate what 'this' is refering to using .apply, .call, or . bind.  New binding occurs when we use the 'new' keyword construct a new object. The 'this' keyword is bound to the newly created object when the function is invoked as a constructor function.
+
 5. Why do we need super() in an extended class?
+
+        super() calls the attributes of the parent class.  It replaces the .call command when using class syntax.  The 'this' keyword will now be bound to the parent attributes, as well as any attributes explicity stated in the child class.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
